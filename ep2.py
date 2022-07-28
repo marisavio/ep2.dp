@@ -1,3 +1,8 @@
+import random 
+import funcoes
+import perguntas
+from perguntas import quest 
+
 
 jogando = True 
 while jogando:
@@ -14,10 +19,14 @@ while jogando:
     enter = input('Aperte ENTER para continuar...')
     if enter == '':
         print('')
-'''
+
+
+    pulo = 3
+    ajuda = 2
+    dinheiro = 0 
+
     rodajogo = True 
     while rodajogo:
-'''
+        base = funcoes.transforma_base(quest)
 
-
-hforhob
+        print(base)
