@@ -55,13 +55,15 @@ def valida_questao(questao):
 
     return problemas
 
-def valida_questoes(questao):
-
-    confirmado = valida_questao(questao)
-
-    minhalista = confirmado.items()
-    minhalista = list(minhalista)
-    return minhalista
+def valida_questoes(questoes):
+    i = 0 
+    resposta = []
+    while i < len(questoes):
+        questao = questoes[i]
+        confirmado = valida_questao(questao)
+        resposta.append(confirmado)
+        i += 1
+    return resposta
 
 def sorteia_questao(questoes, nivel):
     sorteia = random.choice(questoes[nivel])
