@@ -3,6 +3,14 @@ import funcoes
 import perguntas
 from perguntas import quest 
 
+base = funcoes.transforma_base(quest)
+print(base)
+
+validar = funcoes.valida_questoes(base['facil'])
+print(validar)
+
+
+print(questao_sorteada)
 
 jogando = True 
 while jogando:
@@ -24,9 +32,17 @@ while jogando:
     pulo = 3
     ajuda = 2
     dinheiro = 0 
+    facil = 3
 
     rodajogo = True 
     while rodajogo:
-        base = funcoes.transforma_base(quest)
+
+        while facil >= 0:
+
+            questao_sorteada = funcoes.sorteia_questao(base, 'facil')
+
+            if 
+
+
 
         print(base)
