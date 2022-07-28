@@ -1,3 +1,5 @@
+import random 
+
 def transforma_base(lista):
     i = 0 
     nd = {}
@@ -52,3 +54,16 @@ def valida_questao(questao):
             problemas['correta'] = 'valor_errado'
 
     return problemas
+
+def valida_questoes(questao):
+
+    confirmado = valida_questao(questao)
+
+    minhalista = confirmado.items()
+    minhalista = list(minhalista)
+    return minhalista
+
+def sorteia_questao(questoes, nivel):
+    sorteia = random.choice(questoes[nivel])
+    return sorteia
+
