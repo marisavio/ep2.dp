@@ -84,3 +84,19 @@ def sorteia_questao_inedida(dic, nivel, lista):
         if quest not in lista:
             lista.append(quest)
             return quest
+
+
+
+# GERA AJUDA
+def gera_ajuda(questao):
+  dica = '''DICA:
+Opções certamente erradas: '''
+  lista = []
+  for k, valor in questao['opcoes'].items():
+    if k != questao['correta']:
+      lista.append(valor)
+  num = random.randint(1, 2)
+  sorteio = random.sample(lista, k=num)
+  dica += ' | '.join(sorteio)
+  return dica
+
