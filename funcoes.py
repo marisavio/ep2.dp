@@ -77,7 +77,7 @@ def questao_para_texto(questao, numero):
     return TXT
 
 
-
+# SORTEIA QUESTAO INEDITA
 def sorteia_questao_inedida(dic, nivel, lista):
     while True:
         quest = sorteia_questao(dic, nivel)
