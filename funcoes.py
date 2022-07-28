@@ -69,3 +69,14 @@ def sorteia_questao(questoes, nivel):
     sorteia = random.choice(questoes[nivel])
     return sorteia
 
+def questao_para_texto(questao, numero):
+    divisoria = '----------------------------------------'
+    NUMERO = (f'QUESTAO {numero}')
+    TITULO = questao['titulo']
+    TXT = divisoria + '\n' + NUMERO + '\n\n' + TITULO + '\n\n' + 'RESPOSTAS:' + '\n'
+
+    for alternativas, op in questao['opcoes'].items():
+        TXT += f'{alternativas}: {op}' + '\n'
+    
+    return TXT
+
