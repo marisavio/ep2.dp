@@ -171,7 +171,7 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           {'titulo': 'Como se escreve a palavra GARRAFA?',
           'nivel': 'facil',
           'opcoes': {'A': 'garafa', 'B': 'afarrag', 'C': 'garrafafa', 'D': 'garrafa'},
-          'correta': 'B'},
+          'correta': 'D'},
 
           {'titulo': 'Quem foi o primeiro presidente do Brasil?',
           'nivel': 'medio',
