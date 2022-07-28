@@ -156,5 +156,55 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'O que é Necrose?',
           'nivel': 'dificil',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa', 'D': 'Morte de tecido orgânico'},
-          'correta': 'D'}
+          'correta': 'D'},
+
+          {'titulo': 'Quem esta amando pyhton?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'andre e mari', 'B': 'fabio', 'C': 'pedro', 'D': 'fortao'},
+          'correta': 'A'},
+
+          {'titulo': 'Quantas copas o Brasil ganhou?',
+          'nivel': 'facil',
+          'opcoes': {'A': '6', 'B': '7', 'C': '5', 'D': 'nenhuma'},
+          'correta': 'C'},
+
+          {'titulo': 'Como se escreve a palavra GARRAFA?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'garafa', 'B': 'afarrag', 'C': 'garrafafa', 'D': 'garrafa'},
+          'correta': 'B'},
+
+          {'titulo': 'Quem foi o primeiro presidente do Brasil?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Marechal Deodoro', 'B': 'Afonso Pena', 'C': 'Castelo Branco', 'D': 'Janio Quadros'},
+          'correta': 'A'},
+
+          {'titulo': 'Quem eh o advogado da serie Breaking Bad?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Walter White', 'B': 'Gus', 'C': 'Saul', 'D': 'Pinkman'},
+          'correta': 'C'},
+
+          {'titulo': 'Qual restaurante ao redor do insper eh mais conhecido por sua procedencia duvidosa?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'jeronimo', 'B': 'Quata', 'C': 'Marrom', 'D': 'Tonys'},
+          'correta': 'D'},
+
+          {'titulo': 'Qual o pior tipo de exercicio em python',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'dicionario', 'B': 'string', 'C': 'arquivo', 'D': 'lista'},
+          'correta': 'B'},\
+          
+          {'titulo': 'Quantos AMMYS o deco acha que a Taylor Swift tem? ',
+          'nivel': 'dificil',
+          'opcoes': {'A': '8', 'B': '10', 'C': '15', 'D': '9'},
+          'correta': 'A'},
+
+          {'titulo': 'Qual especie de animal causa mais mortalidades?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'mosquito', 'B': 'seres humanos', 'C': 'escorpiao', 'D': 'cobra'},
+          'correta': 'A'},
+
+          {'titulo': 'Quantos elementos quimicos a tabela periodica possui?',
+          'nivel': 'dificil',
+          'opcoes': {'A': '118', 'B': '103', 'C': '119', 'D': '129'},
+          'correta': 'A'}
         ]
