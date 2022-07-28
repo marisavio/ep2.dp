@@ -18,3 +18,6 @@ while jogando:
     rodajogo = True 
     while rodajogo:
 '''
+
+
+hforhob
