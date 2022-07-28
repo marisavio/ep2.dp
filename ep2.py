@@ -33,9 +33,18 @@ facil = 0
 numero = 1
 pontuacao = 0
 listafacil = []
-while facil < 3 and numero <= 3:
-    questao_sorteada = funcoes.sorteia_questao(base, 'facil')
-    inedito = funcoes.sorteia_questao_inedida(base, 'facil', listafacil)
+niveis= ['facil', 'medio', 'dificil']
+dif = 0
+nivel = True
+while nivel == True:
+    if dif < 3:
+
+    if dif > 3 and dif < 6:
+
+    if dif > 6:
+        
+    questao_sorteada = funcoes.sorteia_questao(base, niveis[i])
+    inedito = funcoes.sorteia_questao_inedida(base, niveis[i], listafacil)
     pergunta = funcoes.questao_para_texto(inedito, numero)
     print(pergunta)
     resposta = (input('resposta: '))
@@ -55,6 +64,7 @@ while facil < 3 and numero <= 3:
         if enter == '':
             print('')
     facil += 1
+    dif += 1
     numero += 1
 if facil == 3:
     print('Ebaa, voce passou para proximo nivel. |MEDIO|')
