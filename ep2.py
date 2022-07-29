@@ -4,7 +4,8 @@ import perguntas
 from perguntas import quest 
 
 # DESIGN
-linha = print('================================================')
+linha = '================================================'
+print(linha)
 
 # VARIAVEIS
 base = funcoes.transforma_base(quest)
