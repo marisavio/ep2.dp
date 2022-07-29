@@ -31,13 +31,14 @@ if enter == '':
 # COMEÇANDO O JOGO 
 jogando = True 
 while jogando:
+
     # QUESTÕES FACEIS 
     if questoes <= 3:
         questao_sorteada = funcoes.sorteia_questao(base, 'facil')
         inedito = funcoes.sorteia_questao_inedida(base, 'facil', listafacil)
         pergunta = funcoes.questao_para_texto(inedito, numero)
         print(pergunta)
-        resposta = (input('Qual sua resposta?!'))
+        resposta = (input('Qual sua resposta?! '))
     # PASSANDO PARA O NIVEL MEDIO 
     if questoes == 4:
         print('HEY! Você passou para o nível MEDIO!')
@@ -66,7 +67,10 @@ while jogando:
         resposta = (input('Qual sua resposta?!  \n'))
 
     # PULOS
-    if resposta == 'pular':
+    if resposta == 'pular' and pulo > 0:
+        pulo -= 1
+        pula_pergunta = funcoes.questao_para_texto(inedito, numero)
+        print(pula_pergunta)
         print('')
 
     # AJUDA 
@@ -140,7 +144,7 @@ while jogando:
         if enter == '':
             print('')   
     # QUANDO SE ERRA A RESPOSTA DA QUESTÃO 
-    if resposta != 'ajuda' and resposta != inedito['correta']:
+    if resposta != 'ajuda' and resposta != inedito['correta'] and resposta != 'pular':
         print('Que pena! Voce errou e vai sair sem nada.')
         break
     ajuda -= 1
