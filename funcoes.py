@@ -99,4 +99,3 @@ Opções certamente erradas: '''
   sorteio = random.sample(lista, k=num)
   dica += ' | '.join(sorteio)
   return dica
-

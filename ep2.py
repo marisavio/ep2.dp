@@ -3,7 +3,6 @@ import funcoes
 import perguntas
 from perguntas import quest 
 
-
 # DESIGN
 linha = print('================================================')
 
@@ -14,12 +13,10 @@ validarmedio = funcoes.valida_questoes(base['medio'])
 validardificil = funcoes.valida_questoes(base['dificil'])
 pulo = 3
 ajuda = 2
-# INTRO
 
+# INTRO
 print('Olá! Você está na Fortuna DesSoft e terá a oportunidade de enriquecer!\n')
 nome = input('Qual seu nome? \n')
-
-
 print(f'\nOk {nome}, você tem direito a pular 3 vezes e 2 ajudas!\nAs opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!\n')
 enter = input('Aperte ENTER para continuar...')
 if enter == '':
@@ -33,8 +30,6 @@ facil = 0
 numero = 1
 pontuacao = 0
 listafacil = []
-niveis= ['facil', 'medio', 'dificil']
-direitos = ['pular', 'ajuda']
 questoes = 1
 jogando = True 
 while jogando:
@@ -69,36 +64,39 @@ while jogando:
         print(pergunta)
         resposta = (input('Qual sua resposta?!  \n'))
 
+
+# | AJUDA |
     tentativa = 1
-    if resposta == 'ajuda' and tentativa != 0 :
+    if resposta == 'ajuda' and tentativa != 0:
+        print(tentativa)
         aleatoria = inedito['opcoes']['A']
         ajudar = funcoes.gera_ajuda(questao_sorteada)
-        print('Ok, lá vem ajuda! Você ainda tem 1 ajudas!')
-        enter = input('Aperte ENTER para continuar...')
-        if enter == '':
-            print('')  
-        print(f'Dica: \n Opção certamente errada: {aleatoria}')
-        enter = input('Aperte ENTER para continuar...')
-        if enter == '':
-            print('')
+        tentativa -= 1
         if tentativa == 0:
-            print('Não deu! Você já pediu ajuda nesta questão!')
+            print('Voce nao tem direito a mais ajuda(s). Responda a pergunta: ')
             enter = input('Aperte ENTER para continuar...')
             if enter == '':
-                print('')  
+                print('')
+        if ajuda < 0:
+            print('Não deu! Você não tem mais direito a ajuda!')
+            enter = input('Aperte ENTER para continuar...')
+            if enter == '':
+                print('')
         if ajuda == 1:
             print('Ok, lá vem ajuda! ATENÇÃO: Você não tem mais direito a ajudas!')
             enter = input('Aperte ENTER para continuar...')
             if enter == '':
                 print('')
-        elif ajuda == 0:
-            print('Não deu! Você não tem mais direito a ajuda!')
+        if ajuda == 2:
+            print('Ok, lá vem ajuda! Você tem direito a mais uma ajuda!')
             enter = input('Aperte ENTER para continuar...')
             if enter == '':
                 print('')
-        tentativa -= 1
-        ajuda -= 1
-        
+        print(pergunta)
+        resposta = (input('Qual sua resposta?! '))
+
+
+
     if resposta == inedito['correta']:
         if numero == 1:
             pontuacao = 1000
@@ -123,10 +121,10 @@ while jogando:
         enter = input('Aperte ENTER para continuar...')
         if enter == '':
             print('')   
-        else:
-            print('Que pena! Voce errou e vai sair sem nada.')
-            break
-        
+    if resposta != 'ajuda' and resposta != inedito['correta']:
+        print('Que pena! Voce errou e vai sair sem nada.')
+        break
+    ajuda -= 1
     facil += 1
     questoes += 1
     numero += 1
