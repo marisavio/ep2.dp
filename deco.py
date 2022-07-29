@@ -134,7 +134,6 @@ while jogando:
         elif questoes == 9:
             print('PARABÉNS, você zerou o jogo e ganhou um milhão de reais! ')
             pontuacao = 1000000
-            break
         print(f'Voce acertou!! Seu premio atual e de R$ {pontuacao}')
         enter = input('Aperte ENTER para continuar...')
         if enter == '':
